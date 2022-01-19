@@ -299,6 +299,7 @@ def create_game(
             su57_felon=False,
             frenchpack=False,
             high_digit_sams=False,
+            sam_site_asset_pack=False,
         ),
     )
     game = generator.generate()
