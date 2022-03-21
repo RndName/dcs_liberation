@@ -2,8 +2,9 @@ from typing import Type
 
 from dcs.helicopters import HelicopterType, helicopter_map
 from dcs.planes import PlaneType, plane_map
-from dcs.unittype import VehicleType
+from dcs.unittype import VehicleType, StaticType
 from dcs.vehicles import vehicle_map
+from dcs.statics import fortification_map
 
 
 def helicoptermod(helicopter: Type[HelicopterType]) -> Type[HelicopterType]:
@@ -19,3 +20,8 @@ def planemod(plane: Type[PlaneType]) -> Type[PlaneType]:
 def vehiclemod(vehicle: Type[VehicleType]) -> Type[VehicleType]:
     vehicle_map[vehicle.id] = vehicle
     return vehicle
+
+
+def fortificationmod(static: Type[StaticType]) -> Type[StaticType]:
+    fortification_map[static.id] = static
+    return static
